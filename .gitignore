@@ -1,0 +1,25 @@
+# Ignore environment files
+*.env
+
+# Python specific
+*.pyc
+*.pyo
+__pycache__
+
+# Django-specific
+*.db
+*.sqlite3
+*.log
+
+# Node.js specific (if any)
+node_modules/
+
+# IDE specific
+.idea/
+.vscode/
+
+# MacOS specific
+.DS_Store
+
+# .env specific
+.env
