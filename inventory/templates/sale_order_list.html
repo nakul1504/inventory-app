@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h2 class="my-4">Sale Order List</h2>
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Total Price</th>
+                    <th>Sale Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for sale_order in sale_orders %}
+                    <tr>
+                        <td>{{ sale_order.product_name }}</td>
+                        <td>{{ sale_order.quantity }}</td>
+                        <td>{{ sale_order.total_price }}</td>
+                        <td>{{ sale_order.sale_date }}</td>
+                        <td>
+                            <span class="badge
+                                {% if sale_order.status == 'Pending' %}
+                                    bg-warning
+                                {% elif sale_order.status == 'Cancelled' %}
+                                    bg-danger
+                                {% elif sale_order.status == 'Completed' %}
+                                    bg-success
+                                {% else %}
+                                    bg-secondary
+                                {% endif %}">
+                                {{ sale_order.status }}
+                            </span>
+                        </td>
+                        <td>
+                            {% if sale_order.status == 'Pending' %}
+                                <a href="{% url 'complete-sale-order' sale_order.id %}" class="btn btn-success btn-sm">Complete</a>
+                                <a href="{% url 'cancel-sale-order' sale_order.id %}" class="btn btn-danger btn-sm">Cancel</a>
+                            {% else %}
+                                <span class="text-muted">No actions available</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
