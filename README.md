@@ -67,7 +67,7 @@ DEBUG=True
 ```
 
 
-# Project Structure
+## Project Structure
 
 ### `inventory_management/`
 Contains the main Django project configuration files.
