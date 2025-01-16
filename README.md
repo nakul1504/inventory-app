@@ -134,7 +134,7 @@ Project documentation, including setup instructions, features, and API details.
 - Intuitive navigation and user-friendly templates for seamless interaction.
 
 ### Deployment-Ready
-- Fully configured for deployment on platforms like Render or Railway.
+- Fully configured for deployment on platforms like Render.
 - Environment-specific configurations managed through `.env` files.
 
 ---
