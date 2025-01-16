@@ -102,6 +102,7 @@ Project documentation, including setup instructions, features, and API details.
 ### Products Management
 - Add new products with details such as name, description, category, price, and stock quantity.
 - View a list of all products in the inventory.
+- Provided a filter by category for product list.
 - Dynamically fetch supplier names for new product creation.
 
 ### Suppliers Management
@@ -115,6 +116,7 @@ Project documentation, including setup instructions, features, and API details.
 ### Sale Orders
 - Create sale orders with product details and quantity.
 - View a list of all sale orders with their status (Pending, Completed, or Canceled).
+- Provided a filter by order-status for all sale orders.
 - Complete or cancel sale orders with appropriate stock adjustments.
 
 ### Data Validation
