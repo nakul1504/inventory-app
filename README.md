@@ -191,6 +191,8 @@ This application is deployed on [Render](https://render.com) and can be accessed
 
 For further details about the deployment or hosting environment, refer to the [Render Documentation](https://render.com/docs).
 
+---
+
 ## Future Improvements
 
 - Implement user authentication and role-based access control.
