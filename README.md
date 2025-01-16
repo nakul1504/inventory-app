@@ -150,7 +150,7 @@ Project documentation, including setup instructions, features, and API details.
 - **Create Product**: `/add-product/`  
   Endpoint to add a new product.
 
----
+
 
 ### Suppliers
 - **List Suppliers**: `/suppliers/`  
@@ -159,7 +159,7 @@ Project documentation, including setup instructions, features, and API details.
 - **Create Supplier**: `/add-suppliers/`  
   Endpoint to add a new supplier.
 
----
+
 
 ### Stock Movements
 - **Record Movement**: `/add-stock-movement/`  
@@ -168,7 +168,6 @@ Project documentation, including setup instructions, features, and API details.
 - **Stock Level Check**: `/stock-level-check/`
   Endpoint to check stock levels
 
----
 
 ### Sale Orders
 - **List Orders**: `/sale-order-list/`  
