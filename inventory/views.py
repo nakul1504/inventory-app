@@ -53,8 +53,19 @@ class AddProductView(View):
 
 class ProductListView(View):
     def get(self, request):
-        products = db.products.find()
-        return render(request, 'product_list.html', {'products': products})
+        category_filter = request.GET.get('category')  # Get 'category' from query parameters
+        query = {}
+        if category_filter:
+            query['category'] = category_filter  # Filter by category if provided
+
+        products = db.products.find(query)
+        categories = db.products.distinct('category')  # Fetch distinct categories for dropdown
+
+        return render(request, 'product_list.html', {
+            'products': products,
+            'categories': categories,
+            'selected_category': category_filter
+        })
 
 
 class AddSupplierView(View):
@@ -210,7 +221,12 @@ class CompleteSaleOrderView(View):
 
 class SaleOrderListView(View):
     def get(self, request):
-        sale_orders = db.sale_orders.find()
+        status_filter = request.GET.get('status')
+        query = {}
+        if status_filter:
+            query['status'] = status_filter
+
+        sale_orders = db.sale_orders.find(query)
         sale_orders_list = [
             {
                 'id': str(order['_id']),
@@ -223,8 +239,13 @@ class SaleOrderListView(View):
             }
             for order in sale_orders
         ]
-        return render(request, 'sale_order_list.html', {'sale_orders': sale_orders_list})
 
+
+        return render(request, 'sale_order_list.html', {
+            'sale_orders': sale_orders_list,
+            'statuses': ['Pending', 'Completed', 'Cancelled'],  #
+            'selected_status': status_filter
+        })
 
 class StockLevelCheckView(View):
     def get(self, request):
