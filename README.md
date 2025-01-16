@@ -10,6 +10,7 @@ An Inventory Management Application built with **Django** and **MongoDB Cloud** 
 - [Key Functionalities](#key-functionalities)
 - [API Endpoints](#api-endpoints)
 - [Deployment](#deployment)
+- [Future Improvements](#future-improvements)
 
 ---
 
