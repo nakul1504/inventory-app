@@ -24,7 +24,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 DEBUG = os.getenv("DEBUG") == "True"
 
-ALLOWED_HOSTS = ['inventory-app-p3s4.onrender.com']
+ALLOWED_HOSTS = ['inventory-app-p3s4.onrender.com','localhost']
 
 
 # Application definition
