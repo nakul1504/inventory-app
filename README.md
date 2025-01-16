@@ -52,6 +52,8 @@ An Inventory Management Application built with **Django** and **MongoDB Cloud** 
 4. Running the Project Locally
     ```bash
     python manage.py runserver
+   
+---
 
 ## Environment Variables
 
@@ -66,6 +68,7 @@ SECRET_KEY=your_django_secret_key
 DEBUG=True
 ```
 
+---
 
 ## Project Structure
 
@@ -96,6 +99,7 @@ Django CLI utility to manage the project (e.g., running the server, migrations).
 ### `README.md`
 Project documentation, including setup instructions, features, and API details.
 
+---
 
 ## Key Functionalities
 
@@ -135,6 +139,7 @@ Project documentation, including setup instructions, features, and API details.
 - Fully configured for deployment on platforms like Render or Railway.
 - Environment-specific configurations managed through `.env` files.
 
+---
 
 ## API Endpoints
 
@@ -178,5 +183,6 @@ Project documentation, including setup instructions, features, and API details.
 - **Cancel Order**: `cancel-sale-order/<str:sale_order_id>/`  
   Marks a sale order as canceled.
 
+---
 
 ## Deployment
