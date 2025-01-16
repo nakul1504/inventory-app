@@ -189,3 +189,10 @@ This application is deployed on [Render](https://render.com) and can be accessed
 [Live Application](https://inventory-app-p3s4.onrender.com/)
 
 For further details about the deployment or hosting environment, refer to the [Render Documentation](https://render.com/docs).
+
+## Future Improvements
+
+- Implement user authentication and role-based access control.
+- Add pagination for long lists of products and orders.
+- Integrate REST APIs for external system interactions.
+- Add detailed reports and analytics for stock levels and sales.
