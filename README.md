@@ -1,6 +1,6 @@
 # Inventory App
 
-An Inventory Management System built with **Django** and **MongoDB Cloud** to manage products, suppliers, stock movements, and sales orders efficiently. The project follows an intuitive and user-friendly UI powered by Bootstrap.
+An Inventory Management Application built with **Django** and **MongoDB Cloud** to manage products, suppliers, stock movements, and sales orders efficiently. The project follows an intuitive and user-friendly UI powered by Bootstrap.
 
 ---
 
