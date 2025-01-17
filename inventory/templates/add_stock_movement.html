@@ -1,12 +1,60 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="container">
-        <h2 class="my-4">Add Stock Movement</h2>
-        <form method="post" class="p-4 border rounded bg-light">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">Add Stock Movement</button>
-        </form>
+<div class="container mt-5">
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-dark text-white">
+            <h4 class="mb-0">Add Stock Movement</h4>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+                        <label for="id_product" class="form-label">Product</label>
+                        {{ form.product }}
+                        {% if form.product.errors %}
+                            <div class="text-danger">
+                                {{ form.product.errors.as_text }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="id_quantity" class="form-label">Quantity</label>
+                        {{ form.quantity }}
+                        {% if form.quantity.errors %}
+                            <div class="text-danger">
+                                {{ form.quantity.errors.as_text }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="id_movement_type" class="form-label">Movement Type</label>
+                        {{ form.movement_type }}
+                        {% if form.movement_type.errors %}
+                            <div class="text-danger">
+                                {{ form.movement_type.errors.as_text }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="id_notes" class="form-label">Notes</label>
+                        {{ form.notes }}
+                        {% if form.notes.errors %}
+                            <div class="text-danger">
+                                {{ form.notes.errors.as_text }}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-20">Add Stock Movement</button>
+            </form>
+        </div>
     </div>
+</div>
 {% endblock %}

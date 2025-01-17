@@ -1,12 +1,79 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="container">
-        <h2 class="my-4">Add Product</h2>
-        <form method="post" class="p-4 border rounded bg-light">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">Add Product</button>
-        </form>
+<div class="container mt-5">
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-dark text-white">
+            <h4 class="mb-0">Add Product</h4>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="id_name" class="form-label">Name</label>
+                        {{ form.name }}
+                        {% if form.name.errors %}
+                            <div class="text-danger">
+                                {{ form.name.errors.as_text }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="id_description" class="form-label">Description</label>
+                        {{ form.description }}
+                        {% if form.description.errors %}
+                            <div class="text-danger">
+                                {{ form.description.errors.as_text }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="id_category" class="form-label">Category</label>
+                        {{ form.category }}
+                        {% if form.category.errors %}
+                            <div class="text-danger">
+                                {{ form.category.errors.as_text }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="id_price" class="form-label">Price</label>
+                        {{ form.price }}
+                        {% if form.price.errors %}
+                            <div class="text-danger">
+                                {{ form.price.errors.as_text }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="id_stock_quantity" class="form-label">Stock Quantity</label>
+                        {{ form.stock_quantity }}
+                        {% if form.stock_quantity.errors %}
+                            <div class="text-danger">
+                                {{ form.stock_quantity.errors.as_text }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="id_supplier" class="form-label">Supplier</label>
+                        {{ form.supplier }}
+                        {% if form.supplier.errors %}
+                            <div class="text-danger">
+                                {{ form.supplier.errors.as_text }}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-20">Submit</button>
+            </form>
+        </div>
     </div>
+</div>
 {% endblock %}
